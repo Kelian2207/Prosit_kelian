@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lebonplan - Postuler</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Lebonplan</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="entreprise.php">Entreprises</a></li>
+                <li><a href="#">Offres</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth">
+                <a class="conn" href="#">Connexion</a>
+                <a class="incr" href="#">Inscription</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2 class="poste">Postuler pour une offre</h2>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label for="civilite">Civilité :</label>
+            <select id="civilite" name="civilite" required>
+                <option value="M.">M.</option>
+                <option value="Mme">Mme</option>
+                <option value="Autre">Autre</option>
+            </select>
+            
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            
+            <label for="cv">CV (PDF, max 2 Mo) :</label>
+            <input type="file" id="cv" name="cv" accept="application/pdf" required>
+            
+            <button type="submit">Postuler</button>
+        </form>
+    </main>
+</body>
+</html>
